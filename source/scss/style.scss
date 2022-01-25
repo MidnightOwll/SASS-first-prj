@@ -1,1 +1,119 @@
+//Шрифты
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Rosario:wght@700&display=swap');
+// Обнуляющие стили
 @import "_nullStyle.scss";
+
+// основные стили
+%pos-centr-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+%default-btn {
+    text-align: center;
+    border-radius: 8px;
+    background: #09A66D;
+    @extend %pos-centr-flex;
+}
+
+@mixin bg-circl($size, $color) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    @extend %pos-centr-flex;
+    background:  $color;
+    overflow: hidden;
+}
+a{
+    color: #222222;
+}
+body{
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #222222;
+}
+.container{
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+.header {
+
+    &__container {
+        padding: 50px 0px 43px 0px;
+    }
+
+    &__body {
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__link {
+        display: flex;
+    }
+
+    &__search {
+        @include bg-circl(40px, #F3FBF8)
+    }
+
+    &__basket {
+        margin: 0px 32px 0px 28px;
+        @include bg-circl(40px, #F3FBF8)
+    }
+
+    &__search img,
+    &__basket img {
+       width: 24px;
+       height: 24px;
+    }
+
+    &__button {
+        color: #fff;
+        height: 40px;
+        width: 160px;
+        @extend %default-btn
+    }
+}
+.header-menu {
+
+    &__items {
+        
+    }
+
+    &__item {
+        display: inline-block;
+        line-height: 24px;
+    }
+    & li + li{
+        margin-left: 40px;
+    }
+}
+.menu {
+
+    &__item {
+
+
+        &_active {
+           border-bottom: 2px solid #222222;
+        }
+        &:hover{
+            color: red;
+        }
+    }
+}
+.logo {
+    @extend %pos-centr-flex;
+}
+
+

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Rosario:wght@700&display=swap");
 /* Обнуление стилей*/
 * {
   padding: 0;
@@ -73,3 +74,115 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*----------------*/
+.header__button, .header__search, .header__basket, .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__button {
+  text-align: center;
+  border-radius: 8px;
+  background: #09A66D;
+}
+
+a {
+  color: #222222;
+}
+
+body {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #222222;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__container {
+  padding: 50px 0px 43px 0px;
+}
+
+.header__body {
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__search {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F3FBF8;
+  overflow: hidden;
+}
+
+.header__basket {
+  margin: 0px 32px 0px 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F3FBF8;
+  overflow: hidden;
+}
+
+.header__search img,
+.header__basket img {
+  width: 24px;
+  height: 24px;
+}
+
+.header__button {
+  color: #fff;
+  height: 40px;
+  width: 160px;
+}
+
+.header-menu__item {
+  display: inline-block;
+  line-height: 24px;
+}
+
+.header-menu li + li {
+  margin-left: 40px;
+}
+
+.menu__item_active {
+  border-bottom: 2px solid #222222;
+}
+
+.menu__item:hover {
+  color: red;
+}
