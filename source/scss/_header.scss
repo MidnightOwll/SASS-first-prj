@@ -1,0 +1,205 @@
+.header {
+
+    &__container {
+        padding: 50px 15px 43px 15px;
+    }
+
+    &__body {
+        height: 56px;
+        @include flexbox();
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__menu {
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        top: 50px;
+    }
+
+    &__link {
+        @include flexbox();
+    }
+
+    &__search {
+        @include bg-circl(40px, #F3FBF8);
+    }
+
+    &__basket {
+        margin: 0px 32px 0px 28px;
+        @include bg-circl(40px, #F3FBF8);       
+        
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            @include bg-circl(6px, #09A66D);
+            z-index: 4;
+            top: 7.5px;
+            left: 20px;
+        }      
+        
+    }
+
+    &__search img,
+    &__basket img {
+       width: 24px;
+       height: 24px;
+    }
+
+    &__button {
+        color: #fff;
+        height: 40px;
+        width: 160px;
+        @extend %default-btn;
+    }
+    &__small-btn {
+        display: none;
+    }
+    @media screen and (max-width:900px) {
+        &__logo{
+            top: 10px;
+            img{
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+    }
+    @media (max-width: 767px){
+        &__container{
+            padding: 15px 10px;
+        }
+        &__body {
+            height: 40px;
+            @include flexbox();
+            justify-content: end;
+        }
+        &__basket {
+            margin: 0px 15px;
+        }
+        &__button {
+            display: none;
+        }
+        &__small-btn {
+            display: block;
+            @include  bg-circl(40px,#09A66D);
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+        
+    }
+    @media (max-width: 470px){
+        &__logo{
+            left: 88px;
+        }
+        &__menu {
+            
+            width: 100%;
+            //transform: translate(-100%, 0);
+        }
+    }
+    
+}
+.menu {
+    &__body{
+
+    }
+    &__items {
+        @include flexbox();
+        justify-content: start;
+        align-items: center;
+        li + li{
+            margin: 0px 0px 2px 40px;
+        }
+
+    }
+
+    &__item {
+        line-height: 24px;
+        &.active {
+            border-bottom: 2px solid #222222;
+        }
+        &:hover {
+            border-bottom: 2px solid #09A66D;
+        }
+    }
+    @media (max-width: 767px){
+        &__body {
+            position: fixed;
+            height: 100%;
+            width: 50%;
+            top: 60px;
+            left: 0;
+            background: #09A66D;
+            overflow: scroll;
+            transform: translate(-100%, 0);
+            -webkit-transition:transform 1s;
+            -moz-transition:transform 1s;
+            -o-transition:transform 1s;
+            transition:transform 1s;
+        }
+        &__items {            
+            flex-direction: column;
+            margin: 10% 0px;
+            li {
+                margin: 0px 0px 20px 0px !important;
+            }
+        }
+        &__item {
+            a {
+                color: #fff;
+                font-size: 24px;
+            }
+            &.active {
+                border-bottom: 2px solid #fff;
+            }
+            &:hover {
+                border-bottom: 2px solid #222222;
+            }
+            &.active,
+            &:hover {
+                box-sizing: content-box !important;
+                margin: 0px 0px 18px 0px !important;
+            }
+        }
+    }
+}
+.icon-menu{
+    @media (max-width: 767px){
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        @include  bg-circl(40px,#09A66D);        
+        z-index: 15;
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        & span{
+            flex: 0 0 5.5%;
+            margin: 10% 0px;
+            width: 60%;
+            background-color: #fff;
+            &:nth-child(2){
+                margin: 1px;
+            }
+        }
+        &.active{
+            background-color:#7aafce;
+            color: #fff;
+        }
+    }
+}
+.lock {
+    
+}
+

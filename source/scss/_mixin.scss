@@ -1,0 +1,20 @@
+@mixin bg-circl($size, $color) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background:  $color;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexbox(){
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
