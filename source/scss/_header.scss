@@ -145,7 +145,10 @@
             -moz-transition:left 1s;
             -o-transition:left 1s;
             transition:left 1s;  
-            
+            &::-webkit-scrollbar {
+                width: 0px;
+                //background: rgba(255, 255, 255, 0.0);
+            }
             &.active{
                 left: 0;         
             }

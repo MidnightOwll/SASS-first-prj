@@ -1,0 +1,75 @@
+.footer {
+    background: #FCFEFD;
+    
+    &__row {
+        
+        padding: 105px 0px 118px 0px;
+        @include flexbox();
+        justify-content: space-between;
+    }
+
+    &__info {
+        flex: 0 1 29%;
+        align-self:end;
+        position: relative;
+    }
+
+    &__logo {        
+        position: absolute;
+        top: -100px;
+        img{
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    &__text {
+        padding: 0px 10px 0px 0px;
+    }
+    &__links {
+        flex: 0 1 61%;
+    }
+}
+
+.links {
+    
+    &__row{
+        @include flexbox();
+        justify-content: space-between;
+    }
+    &__item {
+        padding: 0px 10px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 31px;
+        margin: 0px 0px 40px 0px;
+    }
+
+    &__list {
+        li + li {
+            padding: 24px 0px 0px 0px;
+            line-height: 23.5px;
+        }
+    }
+
+    &__link {
+        
+    }
+
+    &__icon {
+        @include flexbox();
+        justify-content: center;
+        margin: 0px -25px;
+        a{
+            padding: 0 25px;
+        }
+        img{
+            height: 24px;            
+        }
+
+    }
+}

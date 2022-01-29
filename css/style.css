@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Rosario:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosario:wght@700&display=swap");
 /* Обнуление стилей*/
 * {
   padding: 0;
@@ -74,11 +74,6 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: rgba(255, 255, 255, 0);
 }
 
 /*----------------*/
@@ -347,6 +342,9 @@ a {
     -webkit-transition: left 1s;
     transition: left 1s;
   }
+  .menu__body::-webkit-scrollbar {
+    width: 0px;
+  }
   .menu__body.active {
     left: 0;
   }
@@ -430,14 +428,112 @@ a {
   }
 }
 
+.footer {
+  background: #FCFEFD;
+}
+
+.footer__row {
+  padding: 105px 0px 118px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 29%;
+          flex: 0 1 29%;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  position: relative;
+}
+
+.footer__logo {
+  position: absolute;
+  top: -100px;
+}
+
+.footer__logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.footer__text {
+  padding: 0px 10px 0px 0px;
+}
+
+.footer__links {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 61%;
+          flex: 0 1 61%;
+}
+
+.links__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.links__item {
+  padding: 0px 10px;
+}
+
+.links__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px;
+  margin: 0px 0px 40px 0px;
+}
+
+.links__list li + li {
+  padding: 24px 0px 0px 0px;
+  line-height: 23.5px;
+}
+
+.links__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px -25px;
+}
+
+.links__icon a {
+  padding: 0 25px;
+}
+
+.links__icon img {
+  height: 24px;
+}
+
 .page {
+  position: absolute;
   width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 0;
+  left: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.main-screen {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: relative;
 }
