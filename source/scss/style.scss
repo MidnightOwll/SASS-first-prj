@@ -70,12 +70,7 @@ a{
     position: relative;  
 }
 .default-btn {
-    text-align: center;
-    border-radius: 8px;
-    background: #09A66D;
-    @include flexbox();
-    align-items: center;
-    justify-content: center;
+    @include bg-circl(64px, #09A66D);
 }
 .title {
     font-family: Rosario;
@@ -89,8 +84,13 @@ a{
     position: relative;
     z-index: 0;
     &__head {
+        padding-top: 93px;
         position: relative;
         z-index: 1;
+        @include flexbox();
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     &__bg{
         position: absolute;
@@ -104,18 +104,44 @@ a{
     }
 
     &__title {
+        text-align: center;
+        margin: 0px 0px 20px 0px;
     }
 
     &__text {
+        max-width: 637px;
+        text-align: center;
+        margin: 0px 0px 40px 0px;
     }
 
     &__link {
+        text-align: center;
+        & a{
+            @include flexbox();
+            justify-content: center;
+            align-items: center;
+        }
     }
-
+    &__name-link{
+        font-family: DM Sans;
+        font-weight: 500;
+        padding: 0px 20px 0px 0px;
+    }
     &__btn {
+        position: relative;
+        &::before{
+            content: '\2192';
+            position: absolute;
+            font-size: 32px;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__body {
+        padding-bottom: 50px;
     }
 }
 
