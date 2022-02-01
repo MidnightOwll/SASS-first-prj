@@ -2,7 +2,6 @@
     background: #FCFEFD;
     
     &__row {
-        
         padding: 105px 0px 118px 0px;
         @include flexbox();
         justify-content: space-between;
@@ -18,8 +17,8 @@
         position: absolute;
         top: -100px;
         img{
-            width: 70px;
-            height: 70px;
+            max-width: 70px;
+            max-height: 70px;
         }
     }
 
@@ -28,6 +27,31 @@
     }
     &__links {
         flex: 0 1 61%;
+    }
+    @media (max-width: 900px){        
+        &__logo{
+            left: 50vw;
+            transform: translate(-50%, 0);
+            & img{
+                max-width: 45px;
+                max-height: 45px
+            }
+        }
+    }
+    @media (max-width: 769px){
+        &__row {
+            flex-direction: column;
+        }
+        &__text {
+            padding: 0 10px;
+            margin: 0px 0px 10px 0px;
+        }
+        &__logo{
+            top: -47.5px;
+        }
+        &__row {
+            padding: 50px 0px 20px 0px;
+        }
     }
 }
 
@@ -70,6 +94,40 @@
         img{
             height: 24px;            
         }
-
+    }
+    @media (max-width: 769px){
+        &__title {
+            margin: 0px 0px 10px 0px;
+        }
+    
+        &__list {
+            li + li {
+                padding: 10px 0px 0px 0px;
+            }
+        }
+    }
+    @media (max-width: 620px){
+        &__row{
+            flex-direction: column;
+            align-items: left;
+        }
+        &__item {
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            &.active{
+                padding: 0px 0px 120px 0px;
+            }
+        }
+        &__list {
+            min-width: 100%;
+            min-height: 100%;
+            top: 41px;
+            position: absolute;
+            background: #666;     
+            a{
+                color: #fff;
+            }       
+        }
     }
 }

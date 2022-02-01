@@ -58,8 +58,13 @@
         color: #fff;
         height: 40px;
         width: 160px;
-        @extend %default-btn;
-    }
+        text-align: center;
+        border-radius: 8px;
+        background: #09A66D;
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        }
     &__small-btn {
         display: none;
     }
@@ -73,7 +78,7 @@
         }
         
     }
-    @media (max-width: 767px){
+    @media (max-width: 769px){
         &__container{
             padding: 15px 10px;
         }
@@ -102,8 +107,7 @@
         &__logo{
             left: 88px;
         }
-        &__menu {
-            
+        &__menu {            
             width: 100%;
         }
     }
@@ -131,7 +135,7 @@
             border-bottom: 2px solid #09A66D;
         }
     }
-    @media (max-width: 767px){
+    @media (max-width: 769px){
         &__body {
             position: fixed;
             height: 100%;
@@ -180,7 +184,7 @@
     }
 }
 .icon-menu{
-    @media (max-width: 767px){
+    @media (max-width: 769px){
         position: absolute;
         top: 15px;
         left: 10px;

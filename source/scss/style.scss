@@ -30,21 +30,7 @@ a{
     overflow: hidden;
 }
 
-//Базовые стили------------------------------------------------------------------------------------------------------------------------
-%pos-centr-flex{
-    @include flexbox();
-    align-items: center;
-    justify-content: center;
-}
-%default-btn {
-    text-align: center;
-    border-radius: 8px;
-    background: #09A66D;
-    @include flexbox();
-    align-items: center;
-    justify-content: center;
-}
-//-------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //Оболочка
 .wrapper{
@@ -75,12 +61,21 @@ a{
 
 }
 .logo {
-    @extend %pos-centr-flex;
+    @include flexbox();
+    align-items: center;
+    justify-content: center;
 }
 .main-screen {
     flex: 1 0 100%;
     position: relative;  
 }
-
+.default-btn {
+    text-align: center;
+    border-radius: 8px;
+    background: #09A66D;
+    @include flexbox();
+    align-items: center;
+    justify-content: center;
+}
 
 
