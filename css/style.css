@@ -624,3 +624,33 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.title {
+  font-family: Rosario;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 90px;
+}
+
+.about {
+  background: #f3fbf8;
+  position: relative;
+  z-index: 0;
+}
+
+.about__head {
+  position: relative;
+  z-index: 1;
+}
+
+.about__bg {
+  position: absolute;
+  max-width: 42.5%;
+  top: -41px;
+  z-index: 0;
+}
+
+.about__bg img {
+  width: 100%;
+  height: 100%;
+}
