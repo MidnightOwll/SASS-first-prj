@@ -67,7 +67,7 @@ a{
     justify-content: center;
 }
 .main-screen {
-    flex: 1 0 100%;
+    flex: 1 1 100%;
     position: relative;  
 }
 .default-btn {
@@ -127,7 +127,7 @@ a{
 
     &__link {
         text-align: center;
-        a{
+        a {
             @include flexbox();
             justify-content: center;
             align-items: center;
@@ -154,6 +154,48 @@ a{
     &__body {
         margin: -46px 0px 0px 0px;
         padding-bottom: 50px;
+    }
+    @media screen and (max-width:900px) {
+        &__head {
+            padding-top: 15px
+        }
+        &__bg{
+            top: -53px;
+        }
+        &__title {
+            font-size: 45px;
+            margin: 0px 0px 10px 0;
+        }
+        &__text {
+            margin: 0px 0px 15px 0px;
+        }
+        &__btn {
+            margin: 0px 0px 10px 0px;
+        }
+        &__body {
+            margin: 0px;
+        }
+    }
+    @media (max-width: 769px){
+        &__bg{
+            display: none
+        }
+    }
+    @media (max-width: 620px){
+        &__title { 
+            font-size: 30px;
+            line-height: 35px;
+        }
+        &__btn {
+            width: 40px;
+            height: 40px;
+            &::before{
+                font-size: 20px;
+            }
+        }
+        &__body {
+            padding-bottom: 15px;
+        }
     }
 }
 
@@ -195,10 +237,30 @@ a{
         flex: 1 0 33.33%;
         padding: 15px 0px;
     }
+    @media (max-width: 620px){
+        &__row {
+            flex-direction: column;
+        }
+        &__img {
+            width: 50%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__items {
+            margin: -5px 0;
+        }
+    
+        &__item {
+            padding: 5px 0px;
+        }
+        &__stat {
+            min-width: 100%;
+        }
+    }
 }
 .item-about {
-    
-
     &__row {
         background: #fff;
         @include flexbox();
@@ -223,6 +285,19 @@ a{
     }
 
     &__desc {
+    }
+    @media screen and (max-width:900px) {
+        &__numb {
+            font-size: 30px;
+        }
+    }
+    @media (max-width: 620px){
+        &__row {
+            justify-content: space-between;
+        }
+        &__body, &__numb {
+            text-align: right;
+        }
     }
 }
 
