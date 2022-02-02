@@ -107,6 +107,7 @@ a {
 
 .container {
   max-width: 1270px;
+  width: 100%;
   margin: 0 auto;
   padding: 0px 15px;
 }
@@ -640,6 +641,10 @@ a {
   z-index: 0;
 }
 
+.about__head-container {
+  position: relative;
+}
+
 .about__head {
   padding-top: 93px;
   position: relative;
@@ -662,8 +667,10 @@ a {
 .about__bg {
   position: absolute;
   max-width: 42.5%;
-  top: -41px;
-  z-index: 0;
+  left: 0;
+  top: -131px;
+  z-index: -1;
+  left: -50px;
 }
 
 .about__bg img {
@@ -677,9 +684,13 @@ a {
 }
 
 .about__text {
-  max-width: 637px;
-  text-align: center;
   margin: 0px 0px 40px 0px;
+  text-align: center;
+}
+
+.about__text p {
+  margin: 0 auto;
+  max-width: 637px;
 }
 
 .about__link {
