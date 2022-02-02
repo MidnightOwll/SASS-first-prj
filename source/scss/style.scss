@@ -116,7 +116,7 @@ a{
 
     &__link {
         text-align: center;
-        & a{
+        a{
             @include flexbox();
             justify-content: center;
             align-items: center;
@@ -141,6 +141,7 @@ a{
     }
 
     &__body {
+        margin: -46px 0px 0px 0px;
         padding-bottom: 50px;
     }
 }
@@ -148,18 +149,39 @@ a{
 .body-about {
 
     &__row {
+        @include flexbox();
+        justify-content: end;
+        align-items: center;
     }
 
     &__img {
+        flex: 1 1 70%;
+        position: relative;
+        mix-blend-mode: darken;
+        z-index: 0;
+        //padding: 0px 0px 50% 0;
+        img{
+            width: 88%;
+            height: 88%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // object-fit: cover;
+        }
     }
 
     &__stat {
+        flex: 0 1 250px;
     }
 
     &__items {
+        @include flexbox();
+        flex-direction: column;
     }
 
     &__item {
+        flex: 1 0 33.33%;
+        background: #fff;
     }
 }
 .item-about {
