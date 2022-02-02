@@ -684,6 +684,7 @@ a {
 }
 
 .about__text {
+  color: #555555;
   margin: 0px 0px 40px 0px;
   text-align: center;
 }
@@ -775,11 +776,41 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: -15px 0;
 }
 
 .body-about__item {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 33.33%;
           flex: 1 0 33.33%;
+  padding: 15px 0px;
+}
+
+.item-about__row {
   background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 17px;
+}
+
+.item-about__img {
+  margin: 0px 24px 0px 0px;
+}
+
+.item-about__body {
+  color: #000;
+}
+
+.item-about__numb {
+  font-family: DM Sans;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
 }

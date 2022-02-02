@@ -116,6 +116,7 @@ a{
     }
 
     &__text {
+        color: #555555;
         margin: 0px 0px 40px 0px;
         text-align: center;
         p {
@@ -187,25 +188,38 @@ a{
     &__items {
         @include flexbox();
         flex-direction: column;
+        margin: -15px 0;
     }
 
     &__item {
         flex: 1 0 33.33%;
-        background: #fff;
+        padding: 15px 0px;
     }
 }
 .item-about {
+    
 
     &__row {
+        background: #fff;
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        padding: 17px;
     }
 
     &__img {
+        margin: 0px 24px 0px 0px;
     }
 
     &__body {
+        color: #000;
     }
 
     &__numb {
+        font-family: DM Sans;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;        
     }
 
     &__desc {
