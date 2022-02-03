@@ -635,6 +635,19 @@ a {
   line-height: 90px;
 }
 
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
 .text {
   color: #555555;
 }
@@ -739,7 +752,7 @@ a {
   padding-bottom: 50px;
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .about__head {
     padding-top: 15px;
   }
@@ -747,7 +760,6 @@ a {
     top: -53px;
   }
   .about__title {
-    font-size: 45px;
     margin: 0px 0px 10px 0;
   }
   .about__text {
@@ -768,10 +780,6 @@ a {
 }
 
 @media (max-width: 620px) {
-  .about__title {
-    font-size: 30px;
-    line-height: 35px;
-  }
   .about__btn {
     width: 40px;
     height: 40px;
@@ -888,7 +896,7 @@ a {
   text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .item-about__numb {
     font-size: 30px;
   }
@@ -937,6 +945,79 @@ a {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 45%;
           flex: 0 1 45%;
+}
+
+.we-best__fone {
+  top: 35%;
+  left: 50%;
+  height: 0;
+  width: 0;
+  position: relative;
+  border: 209px solid #09A66D;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -2;
+}
+
+.we-best__fone::after, .we-best__fone::before {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  width: 420px;
+  height: 38.17px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.we-best__fone::after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.we-best__fone::before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.we-best__dec {
+  position: absolute;
+  top: -293px;
+  left: -80px;
+  z-index: -1;
+}
+
+.we-best__img {
+  position: absolute;
+  top: -290px;
+  left: -186.5px;
+}
+
+@media (max-width: 900px) {
+  .we-best__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .we-best__right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .we-best__left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: center;
+  }
+  .we-best__items-info {
+    min-width: 100%;
+  }
 }
 
 .items-info__item {
