@@ -390,6 +390,33 @@ a{
             min-width: 100%;
         }
     }
+    @media (max-width: 769px){
+        &__row {
+            padding: 30px 0px;
+        }
+        &__fone {
+            border: 109px solid #09A66D;
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #fff;
+                width: 220px;
+                height: 18.17px;
+            }
+        }
+        &__dec {
+            width: 220px;
+            top: -170px;
+            left: -55px;
+            z-index: -1;
+        }
+        &__img {
+            width: 220px;
+            top: -161px;
+            left: -110px;
+        }
+    }
 }
 .items-info {
     
@@ -424,6 +451,18 @@ a{
     &__text {
         font-size: 14px;
         line-height: 20px;
+    }
+    @media (max-width: 769px){
+        &__item {
+            padding: 15px 10px;
+        }
+        &__icon {
+            height: 40px;
+            width: 40px;
+            img {
+                height: 24px;
+            }
+        }
     }
 }
 

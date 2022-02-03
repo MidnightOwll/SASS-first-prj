@@ -1020,6 +1020,33 @@ a {
   }
 }
 
+@media (max-width: 769px) {
+  .we-best__row {
+    padding: 30px 0px;
+  }
+  .we-best__fone {
+    border: 109px solid #09A66D;
+  }
+  .we-best__fone::after, .we-best__fone::before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 220px;
+    height: 18.17px;
+  }
+  .we-best__dec {
+    width: 220px;
+    top: -170px;
+    left: -55px;
+    z-index: -1;
+  }
+  .we-best__img {
+    width: 220px;
+    top: -161px;
+    left: -110px;
+  }
+}
+
 .items-info__item {
   padding: 40px 59px;
   display: -webkit-box;
@@ -1073,4 +1100,17 @@ a {
 .items-info__text {
   font-size: 14px;
   line-height: 20px;
+}
+
+@media (max-width: 769px) {
+  .items-info__item {
+    padding: 15px 10px;
+  }
+  .items-info__icon {
+    height: 40px;
+    width: 40px;
+  }
+  .items-info__icon img {
+    height: 24px;
+  }
 }
