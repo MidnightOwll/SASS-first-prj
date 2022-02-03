@@ -79,6 +79,9 @@ a{
     font-weight: 700;
     line-height: 90px;
 }
+.text {
+    color: #555555;
+}
 
 .about {
     background: #f3fbf8; 
@@ -116,7 +119,6 @@ a{
     }
 
     &__text {
-        color: #555555;
         margin: 0px 0px 40px 0px;
         text-align: center;
         p {
@@ -300,5 +302,63 @@ a{
         }
     }
 }
+
+.we-best {
+
+    &__row {
+        @include flexbox();
+        justify-content: space-between;
+        padding: 130px 0px 146px 0px;
+    }
+
+    &__left {
+        flex: 0 1 54%;
+    }
+
+    &__title {
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__text {
+        margin: 0px 0px 15px 0px;
+    }
+
+    &__items-info {
+
+    }
+
+    &__right {
+        flex: 0 1 34%;
+    }
+
+    &__fone {
+    }
+
+    &__img {
+    }
+}
+.items-info {
+
+    &__item {
+        padding: 8% 11.854%;
+        @include flexbox();        
+    }
+
+    &__icon {
+        img {
+            width: 40px;
+        }
+    }
+
+    &__body {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+}
+
 
 
