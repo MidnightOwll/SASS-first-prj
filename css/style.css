@@ -917,8 +917,8 @@ a {
 
 .we-best__left {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 55%;
+          flex: 0 1 55%;
 }
 
 .we-best__title {
@@ -929,10 +929,14 @@ a {
   margin: 0px 0px 15px 0px;
 }
 
+.we-best__items-info {
+  max-width: 90%;
+}
+
 .we-best__right {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
 }
 
 .items-info__item {
