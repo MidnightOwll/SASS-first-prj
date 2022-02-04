@@ -494,17 +494,33 @@ a{
 }
 
 .explor {
+    background: #09A66D0D;
 
     &__row {
+        padding: 88px 0px 143px 0px;
+        @include flexbox();
+        position: relative;
+        justify-content: space-between;
     }
 
     &__bg {
+        position: absolute;
     }
 
     &__img {
+        flex: 0 1 45%;
+        position: relative;
+        img{
+            top: 0;
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__body {
+        flex: 0 1 50%;
     }
 
     &__title {

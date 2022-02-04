@@ -1136,3 +1136,44 @@ a {
     height: 24px;
   }
 }
+
+.explor {
+  background: #09A66D0D;
+}
+
+.explor__row {
+  padding: 88px 0px 143px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.explor__bg {
+  position: absolute;
+}
+
+.explor__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
+  position: relative;
+}
+
+.explor__img img {
+  top: 0;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.explor__body {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
