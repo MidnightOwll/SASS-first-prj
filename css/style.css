@@ -604,14 +604,26 @@ a {
           justify-content: center;
 }
 
-.main-screen {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  position: relative;
+.link-btn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.default-btn {
+.link-btn__name {
+  text-align: center;
+  font-family: DM Sans;
+  font-weight: 500;
+  padding: 0px 20px 0px 0px;
+}
+
+.link-btn__btn {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -626,6 +638,35 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.link-btn__btn::before {
+  content: '\2192';
+  position: absolute;
+  font-size: 32px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 900px) {
+  .link-btn__btn {
+    width: 40px;
+    height: 40px;
+  }
+  .link-btn__btn::before {
+    font-size: 20px;
+  }
+}
+
+.main-screen {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  position: relative;
 }
 
 .title {
@@ -635,7 +676,7 @@ a {
   line-height: 90px;
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .title {
     font-size: 45px;
   }
@@ -710,43 +751,6 @@ a {
   max-width: 637px;
 }
 
-.about__link {
-  text-align: center;
-}
-
-.about__link a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about__name-link {
-  font-family: DM Sans;
-  font-weight: 500;
-  padding: 0px 20px 0px 0px;
-}
-
-.about__btn {
-  position: relative;
-}
-
-.about__btn::before {
-  content: '\2192';
-  position: absolute;
-  font-size: 32px;
-  color: #fff;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .about__body {
   margin: -46px 0px 0px 0px;
   padding-bottom: 50px;
@@ -780,13 +784,6 @@ a {
 }
 
 @media (max-width: 620px) {
-  .about__btn {
-    width: 40px;
-    height: 40px;
-  }
-  .about__btn::before {
-    font-size: 20px;
-  }
   .about__body {
     padding-bottom: 15px;
   }

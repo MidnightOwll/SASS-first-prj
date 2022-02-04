@@ -66,19 +66,23 @@ a{
     align-items: center;
     justify-content: center;
 }
+
 .link-btn {
-    text-align: center;
-    font-family: DM Sans;
-    font-weight: 500;
-    &:first-child{
-        padding: 0px 20px 0px 0px;
-    }
     a {
         @include flexbox();
         justify-content: center;
         align-items: center;
     }
-    &:last-child{
+    
+    &__name {
+        text-align: center;
+        font-family: DM Sans;
+        font-weight: 500;
+        padding: 0px 20px 0px 0px;
+    }
+
+    &__btn {
+        @include bg-circl(64px, #09A66D);
         position: relative;
         &::before{
             content: '\2192';
@@ -90,21 +94,26 @@ a{
             transform: translate(-50%, -50%);
         }
     }
-}
-
+    @media (max-width: 900px){
+        &__btn {
+            width: 40px;
+            height: 40px;
+            &::before{
+                font-size: 20px;
+            }
+        }
+    }
+}   
 .main-screen {
     flex: 1 1 100%;
     position: relative;  
-}
-.default-btn {
-    @include bg-circl(64px, #09A66D);
 }
 .title {
     font-family: Rosario;
     font-size: 70px;
     font-weight: 700;
     line-height: 90px;
-    @media screen and (max-width:900px) {
+    @media (max-width:900px) {
         font-size: 45px;
     }
     @media (max-width: 620px){
@@ -163,10 +172,6 @@ a{
 
     &__link {
     }
-    &__name-link{
-    }
-    &__btn {
-    }
 
     &__body {
         margin: -46px 0px 0px 0px;
@@ -198,13 +203,6 @@ a{
         }
     }
     @media (max-width: 620px){
-        &__btn {
-            width: 40px;
-            height: 40px;
-            &::before{
-                font-size: 20px;
-            }
-        }
         &__body {
             padding-bottom: 15px;
         }
