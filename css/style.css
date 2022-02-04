@@ -1142,7 +1142,7 @@ a {
 }
 
 .explor__row {
-  padding: 88px 0px 143px 0px;
+  padding: 88px 0px 123px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1176,4 +1176,16 @@ a {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+}
+
+.explor__title {
+  margin: 0px 0px 20px 0px;
+}
+
+.explor__text {
+  margin: 0px 0px 50px 0px;
+}
+
+.explor__link {
+  margin: 0px 0px 20px 0px;
 }
