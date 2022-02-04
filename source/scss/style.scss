@@ -66,6 +66,32 @@ a{
     align-items: center;
     justify-content: center;
 }
+.link-btn {
+    text-align: center;
+    font-family: DM Sans;
+    font-weight: 500;
+    &:first-child{
+        padding: 0px 20px 0px 0px;
+    }
+    a {
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+    }
+    &:last-child{
+        position: relative;
+        &::before{
+            content: '\2192';
+            position: absolute;
+            font-size: 32px;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
 .main-screen {
     flex: 1 1 100%;
     position: relative;  
@@ -136,29 +162,10 @@ a{
     }
 
     &__link {
-        text-align: center;
-        a {
-            @include flexbox();
-            justify-content: center;
-            align-items: center;
-        }
     }
     &__name-link{
-        font-family: DM Sans;
-        font-weight: 500;
-        padding: 0px 20px 0px 0px;
     }
     &__btn {
-        position: relative;
-        &::before{
-            content: '\2192';
-            position: absolute;
-            font-size: 32px;
-            color: #fff;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
     }
 
     &__body {
