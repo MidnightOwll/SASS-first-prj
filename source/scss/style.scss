@@ -125,9 +125,35 @@ a{
 .text {
     color: #555555;
 }
-.prev {
+.prev,
+.next {
+    position: relative;
+    @include bg-circl(56px, #09A66D);
+    color: #fff;
+    font-size: 30px;
+    &:hover {
+        border: 1px solid #444444;
+    }
+    &.disable{
+        color: #CCCCCC;
+        border: 1px solid #CCCCCC;
+        background-color: transparent;
+        &:hover {
+            background-color: #C4C4C4;
+            color: #fff;
+        }
+    }
+    
+}
+.prev{
+    &::after {
+        content: '\003C';
+    }
 }
 .next {
+    &::after {
+        content: '\003E';        
+    }
 }
 
 .about {
@@ -643,13 +669,16 @@ a{
     }
 
     &__btn {
+    display: -webkit-inline-box;;
     }
 
-    &__prev {
+    &__prev{
+        margin: 0px 26px 0px 0px;
     }
 
     &__next {
     }
+
 }
 
 .img-prev {
