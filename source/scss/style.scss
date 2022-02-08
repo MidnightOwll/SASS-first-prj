@@ -579,24 +579,40 @@ a{
 .what-say {
 
     &__row {
+        @include flexbox();
+        justify-content: space-between;
+        padding: 96px 0px 150px 0px;
     }
 
     &__body {
+        flex: 0 1 52%;
     }
 
     &__title {
+        margin: 0px 0px 30px 0px;
     }
 
     &__text {
+        margin: 0px 0px 30px 0px;
     }
 
     &__rating-slaid {
+        padding: 10px 0px;
     }
 
     &__imgs {
+        flex: 0 1 40%;
     }
 
     &__img-main {
+        position: relative;
+        @include bg-circl(500px, #F3FBF8);
+        img {
+            position: absolute;
+            mix-blend-mode: darken;
+            max-width: 440px;
+            bottom: 0;
+        }        
     }
 
     &__img-prev {
@@ -615,6 +631,9 @@ a{
     }
 
     &__title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
     }
 
     &__stars {
